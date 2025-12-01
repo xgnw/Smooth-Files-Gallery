@@ -1,5 +1,7 @@
 <?php
 
+/* DOES NOT WORK! Needs to be updated for Files Gallery >= 0.4.0 */
+
 // Files Gallery tasks plugin, allows you to pre-create cache, clear cache, and more ...
 
 // index.php?action=tasks&task=TASKNAME
@@ -121,7 +123,7 @@ if(tasks::$task === 'download_assets'){
 
   // attempt to download
   //$assets_download = 'http://files.test/npm/_files/assets/assets.zip';
-  $assets_download = 'https://cdn.jsdelivr.net/npm/smooth-files-gallery@0.4.0/_files/assets/assets.zip';
+  $assets_download = 'https://cdn.jsdelivr.net/npm/smooth-files-gallery@0.5.0/_files/assets/assets.zip';
   $assets_downloaded = file_get_contents($assets_download);
   if(empty($assets_downloaded)) U::error("Can't download <a href=\"$assets_download\">$assets_download</a>", 400); // failed to download
 
